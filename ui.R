@@ -4,13 +4,12 @@ shinyUI(pageWithSidebar(
         sidebarPanel(
                 numericInput("temperature", label = "Enter Temperature Here:", value = 0),
                 
-                radioButtons("unit", label = "Original Units", 
-                             choices = c("Degrees Fahrenheit", "Degrees Celsius")),
-                
-                radioButtons("conversion", label = "Desired Units", 
+                radioButtons("unit", label = NULL, 
                              choices = c("Degrees Fahrenheit", "Degrees Celsius"))
                 ),
         mainPanel(
+                h4("Converted Temperature"),
+                
                 verbatimTextOutput("converted_temp")
         )
 ))
