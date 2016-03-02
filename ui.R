@@ -2,15 +2,15 @@ library(shiny)
 shinyUI(pageWithSidebar(
         headerPanel("Temperature Unit Converter"),
         sidebarPanel(
-                numericInput("temperature", label = "Temperature", value = 0),
-                radioButtons("unit", label = "Degrees", 
-                             choices = c("Fahrenheit", "Celsius"))),
+                numericInput("temperature", label = "Enter Temperature Here:", value = 0),
+                
+                radioButtons("unit", label = "Original Units", 
+                             choices = c("Degrees Fahrenheit", "Degrees Celsius")),
+                
+                radioButtons("conversion", label = "Desired Units", 
+                             choices = c("Degrees Fahrenheit", "Degrees Celsius"))
+                ),
         mainPanel(
-                h4("Is Equivalent To"),
-                
-                verbatimTextOutput("converted_temp"),
-                
-                radioButtons("conversion", label = "Degrees", 
-                             choices = c("Fahrenheit", "Celsius"))
+                verbatimTextOutput("converted_temp")
         )
 ))
