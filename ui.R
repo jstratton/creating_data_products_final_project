@@ -4,7 +4,7 @@ shinyUI(pageWithSidebar(
         sidebarPanel(
                 numericInput("temperature", label = "Enter Temperature Here:", value = 0),
                 
-                radioButtons("unit", label = NULL, 
+                radioButtons("unit", label = "Original Units", 
                              choices = c("Degrees Fahrenheit", "Degrees Celsius"))
                 ),
         mainPanel(
