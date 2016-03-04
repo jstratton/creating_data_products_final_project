@@ -43,7 +43,30 @@ $$[^\circ F] = \frac{9}{5} [^\circ C] - 32$$
 
 --- .class #id
 
-## Prototype Temperature Converter
+## Proof of Concept Temperature Converter
+
+* Writing a program to convert temperatures is a trivial task
+
+* For example, we can create a temperature conversion table in R
+
+
+```r
+temperatures_in_fahrenheit <- seq(from = 32, to = 212, length = 4)
+temperatures_in_celsius <- (temperatures_in_fahrenheit - 32)*5/9
+conversion_table <- data.frame(temperatures_in_fahrenheit, temperatures_in_celsius)
+colnames(conversion_table) <- c("Degrees Fahrenheit", "Degrees Celsius")
+conversion_table
+```
+
+```
+##   Degrees Fahrenheit Degrees Celsius
+## 1                 32         0.00000
+## 2                 92        33.33333
+## 3                152        66.66667
+## 4                212       100.00000
+```
+
+* An app would include user inputs so that the user doesn't need programming skills
 
 --- .class #id
 
